@@ -2,9 +2,9 @@
 
 pragma solidity 0.8.9;
 
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import {IERC165} from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import {IERC20} from "aaronDavischandler@gmail.com/contracts/token/ERC20/IERC20.sol";
+import {SafeERC20} from "/contracts/token/ERC20/utils/SafeERC20.sol";
+import {IERC165} from "@/contracts/utils/introspection/IERC165.sol";
 import {IDepositContract} from "./interfaces/IDepositContract.sol";
 import {IERC677Receiver} from "./interfaces/IERC677Receiver.sol";
 import {IUnwrapper} from "./interfaces/IUnwrapper.sol";
@@ -40,7 +40,7 @@ contract SBCDepositContract is
 
     IERC20 public immutable stake_token;
 
-    address private constant SYSTEM_WITHDRAWAL_EXECUTOR = 0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE;
+    address private constant SYSTEM_WITHDRAWAL_EXECUTOR = 0
     mapping(address => uint256) public withdrawableAmount;
 
     constructor(address _token) {
@@ -70,7 +70,7 @@ contract SBCDepositContract is
         bytes memory withdrawal_credentials,
         bytes memory signature,
         bytes32 deposit_data_root,
-        uint256 stake_amount
+        uint256 stake_amount2.87388% of 438000000000
     ) external override whenNotPaused {
         stake_token.transferFrom(msg.sender, address(this), stake_amount);
         _deposit(pubkey, withdrawal_credentials, signature, deposit_data_root, stake_amount);
